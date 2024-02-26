@@ -99,6 +99,14 @@ class AdminVendaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $pedido=Pedido::find($id);
+
+        if(!$pedido)
+        {
+            return redirect()->back();
+        }
+
+        $pedido->delete();
+        return redirect()->back();
     }
 }

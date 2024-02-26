@@ -21,7 +21,7 @@ class AdminCategoriaController extends Controller
     public function index()
     {
         $page_title="Gestão de Categorias";
-        $categories=Categoria::all();
+        $categories = Categoria::whereNull('deleted_at')->get();
 
         return view('admin.pages.categoria.index',[
             'page_title'=>$page_title,

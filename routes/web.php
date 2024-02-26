@@ -63,6 +63,7 @@ Route::post('admin-product-destroy-{id}',[AdminProdutoController::class,'destroy
 
 
 Route::get('admin-venda-index',[AdminVendaController::class,'index'])->name('admin.venda.index');
+Route::get('admin-venda-destroy-{id}',[AdminVendaController::class,'destroy'])->name('admin.venda.destroy');
 
 
 Route::get('admin-utilizador-index',[AdminUsuarioController::class,'index'])->name('admin.utilizador.index');

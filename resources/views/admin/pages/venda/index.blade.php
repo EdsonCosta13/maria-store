@@ -86,7 +86,7 @@
                                         Visualizar
                                     </a>
 
-                                    <a class="btn btn-danger btn-sm" href="#">
+                                    <a class="btn btn-danger btn-sm" href="{{route('admin.venda.destroy',[$pedido->pedido_id])}}">
                                         <i class="fas fa-trash">
                                         </i>
                                         Excluir
