@@ -32,7 +32,7 @@ class AdminClienteController extends Controller
     public function index()
     {
         $page_title="Gestão de Clientes";
-        $clients=Cliente::all();
+        $clients=Cliente::whereNull('deleted_at')->get();
 
         return view('admin.pages.cliente.index',[
             'page_title'=>$page_title,
@@ -135,6 +135,15 @@ class AdminClienteController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $customer=Cliente::find($id);
+
+        if(!$customer)
+        {
+            return redirect()->back();
+        }
+
+        $customer->delete();
+        return redirect()->back();
+
     }
 }

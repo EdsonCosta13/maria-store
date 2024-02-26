@@ -97,16 +97,23 @@
                                             </i>
                                             Ver
                                         </a>
-                                        <a class="btn btn-info btn-sm" href="#">
+                                        {{-- <a class="btn btn-info btn-sm" href="#">
                                             <i class="fas fa-pencil-alt">
                                             </i>
                                             Editar
-                                        </a>
-                                        <a class="btn btn-danger btn-sm" href="#">
+                                        </a> --}}
+                                        {{-- <a class="btn btn-danger btn-sm" href="{{route('admin.client.destroy',[$client->cliente_id])}}">
                                             <i class="fas fa-trash">
                                             </i>
                                             Excluir
-                                        </a>
+                                        </a> --}}
+
+                                        <form action="{{route('admin.client.destroy',[$client->cliente_id])}}" method="post">
+                                            @method('post')
+                                            @csrf
+                                            <button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash">
+                                            </i> Excluir</button>
+                                        </form>
                                     </td>
                                 </tr>
 

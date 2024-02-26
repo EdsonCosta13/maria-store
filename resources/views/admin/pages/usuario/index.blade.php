@@ -103,21 +103,28 @@
                                             </span>
                                         </td>
                                         <td class="project-actions text-right">
-                                            <a class="btn btn-primary btn-sm" href="#">
+                                            {{-- <a class="btn btn-primary btn-sm" href="#">
                                                 <i class="fas fa-folder">
                                                 </i>
                                                 Ver
-                                            </a>
-                                            <a class="btn btn-info btn-sm" href="#">
+                                            </a> --}}
+                                            {{-- <a class="btn btn-info btn-sm" href="#">
                                                 <i class="fas fa-pencil-alt">
                                                 </i>
                                                 Editar
-                                            </a>
-                                            <a class="btn btn-danger btn-sm" href="#">
+                                            </a> --}}
+                                            {{-- <a class="btn btn-danger btn-sm" href="#">
                                                 <i class="fas fa-trash">
                                                 </i>
                                                 Excluir
-                                            </a>
+                                            </a> --}}
+
+                                            <form action="{{route('admin.utilizador.destroy',[$user->id])}}" method="post">
+                                                @method('post')
+                                                @csrf
+                                                <button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash">
+                                                </i> Excluir</button>
+                                            </form>
                                         </td>
                                     </tr>
                                 @endif

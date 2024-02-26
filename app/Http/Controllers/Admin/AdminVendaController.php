@@ -29,7 +29,7 @@ class AdminVendaController extends Controller
     public function index()
     {
         $page_title = "Gestão de Vendas";
-        $pedidos=Pedido::all();
+        $pedidos=Pedido::whereNull('deleted_at')->get();
 
         return view('admin.pages.venda.index',[
             'pedidos'=>$pedidos,

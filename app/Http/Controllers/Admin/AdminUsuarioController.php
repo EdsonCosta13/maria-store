@@ -12,6 +12,8 @@ use App\Models\User;
 use App\Models\seg\UserRole;
 use App\Models\seg\Role;
 
+use \Auth;
+
 
 
 class AdminUsuarioController extends Controller
@@ -157,6 +159,20 @@ class AdminUsuarioController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user=User::find($id);
+
+        if(!$user)
+        {
+            return redirect()->back();
+        }
+
+        if(Auth::user()->id==$user->id)
+        {
+            return redirect()->back();
+        }
+
+        $user->delete();
+        return redirect()->back();
+
     }
 }

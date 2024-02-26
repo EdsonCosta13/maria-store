@@ -110,6 +110,8 @@ class AdminCategoriaController extends Controller
             $categorie->delete();
             return redirect()->back();
         }
+
+        return redirect()->back();
     }
 
 }
