@@ -20,7 +20,8 @@ use App\Http\Controllers\Web\WebDashboardController;
 use App\Http\Controllers\Web\WebCarrinhoController;
 use App\Http\Controllers\Web\WebUsuarioController;
 use App\Http\Controllers\Web\WebCheckoutController;
-
+use App\Http\Controllers\Web\WebAboutController;
+use App\Http\Controllers\Web\WebContactController;
 
 
 /*
@@ -87,6 +88,8 @@ Route::get('/home',[WebDashboardController::class,'index'])->name('web.index');
 Route::get('/loja',[WebProdutoController::class,'index'])->name('web.loja');
 Route::get('/product-{id}-details',[WebProdutoController::class,'show'])->name('web.product');
 Route::get('/cart',[WebCarrinhoController::class,'index'])->name('web.cart.index');
+Route::get('/about',[WebAboutController::class,'index'])->name('web.about');
+Route::get('/contact-us',[WebContactController::class,'index'])->name('web.contact');
 // Route::post('/addProductToCart-{id}', [WebCarrinhoController::class, 'addProduct'])->name('web.carrinho.addProduct');
 
 
