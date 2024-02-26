@@ -47,7 +47,7 @@
                         <div class="form-group">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Palavra-passe</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                <input type="password" class="form-control" id="exampleInputEmail1"
                                     placeholder="Entra com a palavra-passe" name="password" value="{{old('password')}}">
                             </div>
                             @if ($errors->has('password'))
