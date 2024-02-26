@@ -49,7 +49,8 @@
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Nome</label>
                                             <input type="text" class="form-control" id="exampleInputEmail1"
-                                                placeholder="Enter email" name="nome">
+                                                placeholder="Nome do produto" name="nome"
+                                                title="Não conter caracteres especias. Começar com letra!" pattern="^(?![0-9])[a-zA-Z0-9].*$">
                                         </div>
                                         @if ($errors->has('nome'))
                                             <span class="text-danger">{{ $errors->first('nome') }}</span>
@@ -65,7 +66,8 @@
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Descrição</label>
                                             <input type="text" class="form-control" id="exampleInputEmail1"
-                                                placeholder="Enter email" name="descricao">
+                                                placeholder="descrição" name="descricao"
+                                                title="Não conter caracteres especias. Começar com letra!" pattern="^(?![0-9])[a-zA-Z0-9].*$">
                                         </div>
                                         @if ($errors->has('descricao'))
                                             <span class="text-danger">{{ $errors->first('descricao') }}</span>
