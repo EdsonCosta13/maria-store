@@ -3,15 +3,13 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Models\core\ItemPedido;
+use App\Models\core\Pedido;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-
-use App\Models\core\CarrinhoItem;
-use App\Models\core\Carrinho;
-use App\Models\core\Pedido;
-use App\Models\User;
 
 class WebCheckoutController extends Controller
 {
@@ -78,12 +76,11 @@ class WebCheckoutController extends Controller
     {
         $usuario_id = auth()->user()->id;
 
-
         $itensCarrinho = DB::table('carrinho_items')
             ->join('carrinhos', 'carrinho_items.carrinho_id', '=', 'carrinhos.carrinho_id')
             ->join('produtos', 'carrinho_items.produto_id', '=', 'produtos.produto_id')
             ->where('carrinhos.usuario_id', $usuario_id)
-            ->select('carrinho_items.*', 'produtos.nome', 'produtos.descricao', 'produtos.preco')
+            ->select('carrinho_items.*', 'produtos.produto_id', 'produtos.nome', 'produtos.descricao', 'produtos.preco')
             ->get();
 
         // Inicialize o preço total do carrinho como zero
@@ -106,23 +103,18 @@ class WebCheckoutController extends Controller
 
         $invoice = Pedido::create($invoiceData);
 
-        // $pedidoId = $invoice->pedido_id;
-        // // Recupere o pedido correspondente
-        // $pedido = Pedido::find($pedidoId);
+        foreach ($itensCarrinho as $item) {
+            $itemPedido = new ItemPedido();
 
-        // if ($pedido) {
-        //     // Acesse o carrinho associado a este pedido
-        //     $carrinho = $pedido->usuario;
+            $itemPedido->quantidade = $item->quantidade;
+            $itemPedido->produto_id = $item->produto_id;
+            $itemPedido->pedido_id = $invoice->pedido_id;
+            $itemPedido->save();
+        }
 
-        //     if ($carrinho) {
-        //         // Atualize o estado do carrinho para "fechado"
-        //         $carrinho->status = 'Fechado';
-        //         $carrinho->save();
-        //     }
-        // }
-
-        return redirect()->route('web.loja');
+        return redirect()->route('web.loja')->with('success', 'Pedido realizado!');
     }
+
 
     public function show($id)
     {

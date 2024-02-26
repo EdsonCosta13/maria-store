@@ -100,6 +100,7 @@ Route::get('/cliente/checkout',[WebCheckoutController::class,'index'])->name('we
 Route::post('/cliente/checkout/store',[WebCheckoutController::class,'store'])->name('web.checkout.store');
 
 Route::get('/cliente/meus-pedidos',[WebPedidoController::class,'index'])->name('web.pedido.index');
+Route::get('/cliente/item-pedido/{id}',[WebPedidoController::class,'viewOrderItems'])->name('web.pedido.viewOrderItems');
 
 Route::get('/cliente/perfil',[WebUsuarioController::class,'index'])->name('web.cliente.index');
 Route::get('/cliente/register',[WebUsuarioController::class,'create'])->name('web.cliente.create');

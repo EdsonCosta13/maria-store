@@ -31,64 +31,69 @@
                                 <thead>
                                     <tr>
                                         <th style="width: 20%">
-                                            #REFERÊNCIA
+                                            #PRODUTO
                                         </th>
                                         <th style="width: 20%">
-                                            DATA
+                                            DESCRICAO
                                         </th>
-                                        <th style="width: 20%">
-                                            HORA
+                                        <th style="width: 25%">
+                                            QTD
                                         </th>
 
-                                        <th style="width: 20%" class="text-center">
-                                            ESTADO
-                                        </th>
-                                        <th style="width: 20%">
-                                            Total
+                                        <th style="width: 5%" class="text-center">
+                                            TOT
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @forelse ($pedidos as $pedido)
+                                    @forelse ($itensPedido as $item)
 
                                         <tr>
                                             <td>
-                                                # <a href="{{route('web.pedido.viewOrderItems',[$pedido->pedido_id])}}">{{ $pedido->referencia }}</a>
+                                                # <a href="">{{ $item->nome }}</a>
                                             </td>
                                             <td>
                                                 <a>
-                                                    {{ $pedido->data }}
+                                                    {{ $item->descricao }}
                                                 </a>
                                             </td>
                                             <td>
                                                 <a>
-                                                    {{ $pedido->hora }}
-                                                </a>
-                                            </td>
-
-                                            <td>
-                                                <a>
-                                                    {{ 'Concluído' }}
+                                                    {{$item->quantidade }}
                                                 </a>
                                             </td>
 
                                             <td>
                                                 <a>
-                                                    {{ number_format($pedido->total, 2, ',', '.') }} {{ 'AOA' }}
+                                                    {{$item->preco }}
+                                                </a>
+                                            </td>
+
+                                            <td>
+                                                <a>
+                                                    {{-- {{ number_format($pedido->total, 2, ',', '.') }} {{ 'AOA' }} --}}
                                                 </a>
                                             </td>
 
                                         </tr>
 
+
+
                                     @empty
 
 
                                         <td colspan="12" class="text-muted">
-                                            <p class="text-center">Nenhum pedido feito...</p>
+                                            <p class="text-center">Nenhum item encontrado...</p>
                                         </td>
                                     @endforelse
                                 </tbody>
+
+
                             </table>
+
+                            <div>
+                                <span>Total pedido: <b>  {{ number_format($totalPedido, 2, ',', '.') }} {{ 'AOA' }} </b> (Kzs)</span>
+                            </div>
                         </div>
                         <!-- /.card-body -->
                     </div>

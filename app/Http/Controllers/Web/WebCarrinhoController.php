@@ -78,6 +78,10 @@ class WebCarrinhoController extends Controller
             $qtdDisponivel = Produto::where('produto_id', $produto_id)->value('quantidade');
             $novaQtd = 1;
 
+            if ($qtdDisponivel < 1) {
+                return redirect()->back()->with('warning', 'Produto indisponivel!');
+            }
+
             // Verificar se o produto já está no carrinho
             $itemExistente = CarrinhoItem::where('carrinho_id', $carrinho->carrinho_id)
                 ->where('produto_id', $produto_id)
@@ -113,6 +117,7 @@ class WebCarrinhoController extends Controller
                 $carrinho->total = $carrinho->itens->sum(function ($item) {
                     return $item->quantidade * $item->produto->preco; // Substitua 'preco' pelo nome do campo de preço em sua tabela de produtos
                 });
+
                 $carrinho->save();
 
 
