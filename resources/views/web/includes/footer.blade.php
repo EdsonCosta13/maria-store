@@ -70,7 +70,7 @@
                 <div class="col-md-12 text-center">
 
                     <span class="copyright">
-                         <a target="_blank" href="#">GulaApp Uma Store @copy 2024 - José Eduardo Chico</a>
+                         <a target="_blank" href="#">RestauDelicias Uma Store @copy 2024 - José Eduardo Chico</a>
                     </span>
 
 

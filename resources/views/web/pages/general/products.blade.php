@@ -11,7 +11,7 @@
 						<h3 class="breadcrumb-header">{{$page_title}}</h3>
 					</div>
 				</div>
-				<!-- /row -->  
+				<!-- /row -->
 			</div>
 			<!-- /container -->
 		</div>
@@ -38,7 +38,7 @@
 									<label for="category-6">
 										<span></span>
 										<a href="#">{{$categorie->designacao}}</a>
-										<small>(740)</small>
+										<small>(2)</small>
 									</label>
 								</div>
 							</div>

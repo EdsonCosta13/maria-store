@@ -67,7 +67,7 @@
         <div class="row">
             <div class="sidenav col-sm-12 col-md-6">
                 <div class="login-main-text">
-                    <h2>Gula App<br> Página de Login</h2>
+                    <h2>RestauDelicias<br> Página de Login</h2>
                     <p>Login para o acesso.</p>
                 </div>
             </div>

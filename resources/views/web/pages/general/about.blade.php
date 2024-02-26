@@ -26,9 +26,9 @@
                 <div class="container mt-4">
                     <div class="row">
                         <div class="col-lg-8 col-8">
-                            <h4>Bem-vindo ao Gula App - O Seu Destino Gastronômico Online!</h4>
+                            <h4>Bem-vindo ao RestauDelicias - O Seu Destino Gastronômico Online!</h4>
                             <p>Seja recebido com entusiasmo em nosso universo culinário, onde a tradição encontra a
-                                conveniência, e a qualidade é servida à sua porta. Gula App
+                                conveniência, e a qualidade é servida à sua porta. RestauDelicias
                                 nasceu da paixão pela boa comida e do desejo de proporcionar uma experiência gastronômica
                                 extraordinária, sem sair do conforto da sua casa.</p>
 
