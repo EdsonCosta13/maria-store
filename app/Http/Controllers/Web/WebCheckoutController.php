@@ -10,6 +10,8 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Models\core\CarrinhoItem;
+use App\Models\core\Carrinho;
 
 class WebCheckoutController extends Controller
 {
@@ -75,6 +77,7 @@ class WebCheckoutController extends Controller
     public function store(Request $request)
     {
         $usuario_id = auth()->user()->id;
+        $carrinho = Carrinho::where('usuario_id', $usuario_id)->first();
 
         $itensCarrinho = DB::table('carrinho_items')
             ->join('carrinhos', 'carrinho_items.carrinho_id', '=', 'carrinhos.carrinho_id')
@@ -112,9 +115,10 @@ class WebCheckoutController extends Controller
             $itemPedido->save();
         }
 
+        $carrinho->delete();
+
         return redirect()->route('web.loja')->with('success', 'Pedido realizado!');
     }
-
 
     public function show($id)
     {

@@ -35,6 +35,7 @@ class WebCarrinhoController extends Controller
             ->where('carrinhos.usuario_id', $usuario_id)
             ->where('carrinhos.status', 'Activo')
             ->select('carrinho_items.*', 'produtos.nome', 'produtos.descricao', 'produtos.preco')
+            ->whereNull('carrinhos.deleted_at')
             ->get();
 
         // Inicialize o preço total do carrinho como zero
