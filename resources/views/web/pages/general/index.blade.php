@@ -13,7 +13,7 @@
                             <img src="{{asset('web/img/shop01.png')}}" alt="">
                         </div>
                         <div class="shop-body">
-                            <h3>Laptop<br>Collection</h3>
+                            <h3>Novos Pratos<br>Collection</h3>
                             <a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
@@ -27,7 +27,7 @@
                                             <img src="{{asset('web/img/shop02.png')}}" alt="">
                                         </div>
                                         <div class="shop-body">
-                                            <h3>Cameras<br>Collection</h3>
+                                            <h3>Pizzas<br>Collection</h3>
                                             <a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
                                         </div>
                                     </div>
@@ -41,7 +41,7 @@
                             <img src="{{asset('web/img/shop03.png')}}" alt="">
                         </div>
                         <div class="shop-body">
-                            <h3>Accessories<br>Collection</h3>
+                            <h3>Humburgers<br>Collection</h3>
                             <a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
@@ -66,13 +66,13 @@
                 <!-- section title -->
                 <div class="col-md-12">
                     <div class="section-title">
-                        <h3 class="title">Novos Produtos</h3>
+                        <h3 class="title">Novos Pratos Produtos</h3>
                         <div class="section-nav">
                             <ul class="section-tab-nav tab-nav">
-                                <li class="active"><a data-toggle="tab" href="#tab1">Laptops</a></li>
-                                <li><a data-toggle="tab" href="#tab1">Smartphones</a></li>
-                                <li><a data-toggle="tab" href="#tab1">Cameras</a></li>
-                                <li><a data-toggle="tab" href="#tab1">Accessories</a></li>
+                                <li class="active"><a data-toggle="tab" href="#tab1">Novos Pratoss</a></li>
+                                <li><a data-toggle="tab" href="#tab1">Pratos</a></li>
+                                <li><a data-toggle="tab" href="#tab1">Pizzas</a></li>
+                                <li><a data-toggle="tab" href="#tab1">Humburgers</a></li>
                             </ul>
                         </div>
                     </div>
@@ -168,9 +168,9 @@
                                 </div>
                             </li>
                         </ul>
-                        <h2 class="text-uppercase">hot deal esta semana</h2>
-                        <p>Nova remessa 50% OFF</p>
-                        <a class="primary-btn cta-btn" href="{{route('web.loja')}}">Produtos</a>
+                        <h2 class="text-uppercase" style="color: #fff;">Gulla App - deal esta semana</h2>
+                        <p style="color: #fff;">Nova pratos com 50% de descontos</p>
+                        <a class="primary-btn cta-btn" href="{{route('web.loja')}}" style="color: #fff;">Produtos</a>
                     </div>
                 </div>
             </div>
@@ -193,10 +193,10 @@
                         <h3 class="title">Produtos Mais Vendidos</h3>
                         <div class="section-nav">
                             <ul class="section-tab-nav tab-nav">
-                                <li class="active"><a data-toggle="tab" href="#tab2">Laptops</a></li>
-                                <li><a data-toggle="tab" href="#tab2">Smartphones</a></li>
-                                <li><a data-toggle="tab" href="#tab2">Câmeras</a></li>
-                                <li><a data-toggle="tab" href="#tab2">Acessórios</a></li>
+                                <li class="active"><a data-toggle="tab" href="#tab2">Novos Pratoss</a></li>
+                                <li><a data-toggle="tab" href="#tab2">Pratos</a></li>
+                                <li><a data-toggle="tab" href="#tab2">Pizzas</a></li>
+                                <li><a data-toggle="tab" href="#tab2">Humburgers</a></li>
                             </ul>
                         </div>
                     </div>
