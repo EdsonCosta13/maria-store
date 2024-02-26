@@ -20,6 +20,7 @@ class WebDashboardController extends Controller
         ->leftJoin('imagems', 'produtos.produto_id', '=', 'imagems.produto_id')
         ->leftJoin('categorias','produtos.categoria_id','=','categorias.categoria_id')
         ->select('produtos.*', 'imagems.nome as imagem_nome','categorias.designacao as categoria')
+        ->whereNull('produtos.deleted_at')
         ->get();
 
         return view('web.pages.general.index',[

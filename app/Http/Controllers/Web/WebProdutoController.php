@@ -27,7 +27,8 @@ class WebProdutoController extends Controller
             ->leftJoin('imagems', 'produtos.produto_id', '=', 'imagems.produto_id')
             ->leftJoin('categorias','produtos.categoria_id','=','categorias.categoria_id')
             ->select('produtos.*', 'imagems.nome as imagem_nome','categorias.designacao as categoria')
-            ->get();  
+            ->whereNull('produtos.deleted_at')
+            ->get();
 
         $categories=Categoria::all();
 
