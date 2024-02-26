@@ -4,9 +4,9 @@
   <div id="top-header">
   <div class="container">
   <ul class="header-links pull-left">
-  <li><a href="#"><i class="fa fa-phone"></i> +244 923723275</a></li>
-  <li><a href="#"><i class="fa fa-envelope-o"></i> umastore@email.com</a></li>
-  <li><a href="#"><i class="fa fa-map-marker"></i> Luanda,Mutamba</a></li>
+  <li><a href="#"><i class="fa fa-phone"></i> +244 923827772</a></li>
+  <li><a href="#"><i class="fa fa-envelope-o"></i> cjeduardo.rpog@gmail.com</a></li>
+  <li><a href="#"><i class="fa fa-map-marker"></i> Luanda, UCAN</a></li>
   </ul>
   <ul class="header-links pull-right">
 

@@ -9,11 +9,11 @@
                 <div class="col-md-3 col-xs-6">
                     <div class="footer">
                         <h3 class="footer-title">Quem Somos</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+                        <p>Gulla app, encontre o seu piteu e seja feliz.</p>
                         <ul class="footer-links">
-                            <li><a href="#"><i class="fa fa-phone"></i> +244 923723275</a></li>
-                            <li><a href="#"><i class="fa fa-envelope-o"></i> umastore@email.com</a></li>
-                            <li><a href="#"><i class="fa fa-map-marker"></i> Luanda,Mutamba</a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i> +244 923827772</a></li>
+                            <li><a href="#"><i class="fa fa-envelope-o"></i> cjeduardo.prog@email.com</a></li>
+                            <li><a href="#"><i class="fa fa-map-marker"></i> Luanda, Ucan</a></li>
                         </ul>
                     </div>
                 </div>
@@ -22,11 +22,11 @@
                     <div class="footer">
                         <h3 class="footer-title">Categorias</h3>
                         <ul class="footer-links">
-                            <li><a href="#">Hot deals</a></li>
-                            <li><a href="#">Laptops</a></li>
-                            <li><a href="#">Smartphones</a></li>
-                            <li><a href="#">Cameras</a></li>
-                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Bebidos</a></li>
+                            <li><a href="#">Pizzas</a></li>
+                            <li><a href="#">Masssas</a></li>
+                            <li><a href="#">Humburgers</a></li>
+                            <li><a href="#">Acompanhantes</a></li>
                         </ul>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                 <div class="col-md-12 text-center">
 
                     <span class="copyright">
-                         <a target="_blank" href="#">Electro Uma Store @copy 2023</a>
+                         <a target="_blank" href="#">GulaApp Uma Store @copy 2024 - José Eduardo Chico</a>
                     </span>
 
 
