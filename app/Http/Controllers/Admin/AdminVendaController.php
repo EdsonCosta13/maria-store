@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\core\Pedido;
+use App\Models\core\ItemPedido;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+
 
 use Barryvdh\DomPDF\Facade\Pdf;
 
@@ -33,6 +35,40 @@ class AdminVendaController extends Controller
 
         return view('admin.pages.venda.index',[
             'pedidos'=>$pedidos,
+        ]);
+    }
+
+    public function viewOrderItems($pedido_id)
+    {
+
+        $pedido = Pedido::where('pedido_id', $pedido_id)->first();
+
+        if (!$pedido) {
+            return redirect()->back()->with('error', 'Pedido not found!');
+        }
+
+        $itensPedido = ItemPedido::where('pedido_id', $pedido_id)
+            ->join('produtos', 'item_pedidos.produto_id', '=', 'produtos.produto_id')
+            ->select('item_pedidos.*', 'produtos.nome', 'produtos.descricao', 'produtos.preco')
+            ->get();
+
+        $pedidoInfo = Pedido::find($pedido_id);
+
+        $totalPedido = $itensPedido->sum(function ($item) {
+            return $item->quantidade * $item->preco;
+        });
+
+        // dd($itensPedido);
+
+        $page_title = "Items do pedido ".$pedido_id;
+        $page_description = "Informações Detalhadas do pedido";
+
+        return view('admin.pages.venda.show', [
+            'page_title'=>$page_title,
+            'page_description'=>$page_description,
+            'itensPedido' => $itensPedido,
+            'pedidoInfo' => $pedidoInfo, // Se necessário, para exibir informações adicionais sobre o pedido
+            'totalPedido'=>$totalPedido,
         ]);
     }
 

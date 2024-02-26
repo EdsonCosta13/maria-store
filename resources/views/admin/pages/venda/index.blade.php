@@ -75,12 +75,12 @@
                                 </td>
 
                                 <td class="">
-                                    <a class="btn btn-primary btn-sm" href="#">
+                                    {{-- <a class="btn btn-primary btn-sm" href="#">
                                         <i class="fas fa-folder">
                                         </i>
                                         Imprimir
-                                    </a>
-                                    <a class="btn btn-primary btn-sm" href="#">
+                                    </a> --}}
+                                    <a class="btn btn-primary btn-sm" href="{{route('admin.venda.viewOrderItems',[$pedido->pedido_id])}}">
                                         <i class="fas fa-folder">
                                         </i>
                                         Visualizar
