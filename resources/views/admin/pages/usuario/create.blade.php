@@ -35,7 +35,8 @@
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Primeiro Nome</label>
                                             <input type="text" class="form-control" id="exampleInputEmail1"
-                                                placeholder="Nome" name="primeiro_nome">
+                                                placeholder="Nome" name="primeiro_nome"
+                                                title="Não conter caracteres especias ou números!" pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+">
                                         </div>
                                     </div>
                                 </div>
@@ -46,7 +47,8 @@
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Sobrenome</label>
                                             <input type="text" class="form-control" id="exampleInputEmail1"
-                                                placeholder="Sobrenome" name="sobrenome">
+                                                placeholder="Sobrenome" name="sobrenome"
+                                                title="Não conter caracteres especias ou números!" pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+">
                                         </div>
                                     </div>
                                 </div>
@@ -74,7 +76,8 @@
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Telefone</label>
                                             <input type="text" class="form-control" id=""
-                                                placeholder="Telefonel" name="telefone">
+                                                placeholder="Telefonel" name="telefone"
+                                                title="Insira um número de telefone válido!" pattern="[0-9]+">
                                         </div>
                                     </div>
                                 </div>
@@ -83,7 +86,8 @@
                                     <div class="form-group">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Email</label>
-                                            <input type="text" class="form-control" id="" placeholder="Email" name="email">
+                                            <input type="text" class="form-control" id="" placeholder="Email" name="email"
+                                            pattern="[^\s@]+@[^\s@]+\.[^\s@]+" title="Digite um email válido">
                                         </div>
                                     </div>
                                 </div>
@@ -92,8 +96,9 @@
                                     <div class="form-group">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Password</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail1"
-                                                placeholder="Password" name="password">
+                                            <input type="password" class="form-control" id="exampleInputEmail1"
+                                                placeholder="Password" name="password"
+                                                minlength="4" maxlength="255" title="Deve ter no mínimmo 4 caracteres, no máximo 255!">
                                         </div>
                                     </div>
                                 </div>
