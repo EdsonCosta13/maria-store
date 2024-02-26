@@ -31,7 +31,8 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Primeiro Nome</label>
                                 <input type="text" class="form-control" id="exampleInputEmail1"
-                                    placeholder="Enter Telephone" name="primeiro_nome" value="{{ old('primeiro_nome') }}">
+                                    placeholder="Nome" name="primeiro_nome" value="{{ old('primeiro_nome') }}"
+                                    title="Não conter caracteres especias ou números!" pattern="[A-Za-z]+">
                             </div>
                             @if ($errors->has('primeiro_nome'))
                                 <span class="text-danger">{{ $errors->first('primeiro_nome') }}</span>
@@ -42,8 +43,9 @@
                         <div class="form-group">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Sobrenome</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
-                                    name="sobrenome" value="{{ old('sobrenome') }}">
+                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Sobrenome"
+                                    name="sobrenome" value="{{ old('sobrenome') }}"
+                                    title="Não conter caracteres especias ou números!" pattern="[A-Za-z]+">
                             </div>
                             @if ($errors->has('sobrenome'))
                                 <span class="text-danger">{{ $errors->first('sobrenome') }}</span>
@@ -58,7 +60,8 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Telefone</label>
                                 <input type="text" class="form-control" id="exampleInputEmail1"
-                                    placeholder="Enter Telephone" name="telefone" value="{{ old('telefone') }}">
+                                    placeholder="Enter Telephone" name="telefone" value="{{ old('telefone') }}"
+                                    title="Insira um número de telefone válido!" pattern="[0-9]+([-.\s]?[0-9]+)*">
                             </div>
                             @if ($errors->has('telefone'))
                                 <span class="text-danger">{{ $errors->first('telefone') }}</span>
@@ -70,7 +73,7 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email</label>
                                 <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
-                                    name="email" value="{{ old('email') }}">
+                                    name="email" value="{{ old('email') }}" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" title="Enter a valid email address">
                             </div>
                             @if ($errors->has('email'))
                                 <span class="text-danger">{{ $errors->first('email') }}</span>
@@ -81,8 +84,8 @@
                         <div class="form-group">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Palavra-passe</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1"
-                                    placeholder="Enter Telephone" name="password" value="{{ old('password') }}">
+                                <input type="password" class="form-control" id="exampleInputEmail1"
+                                    placeholder="Enter Password" name="password" value="{{ old('password') }}">
                             </div>
                             @if ($errors->has('password'))
                                 <span class="text-danger">{{ $errors->first('password') }}</span>
