@@ -26,7 +26,7 @@
                     <h4>{{$description_page}}</h4>
                 </div>
             </div>
-            <form action="{{route('auth.authenticate')}}" method="post">  
+            <form action="{{route('auth.authenticate')}}" method="post">
                 @method('post')
                 @csrf
 
@@ -35,8 +35,8 @@
                         <div class="form-group">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1"
-                                    placeholder="Entra com o email" name="email" value="{{old('email')}}">
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    placeholder="Entra com o email" name="email" value="{{old('email')}}" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" title="Enter a valid email address">
                             </div>
                             @if ($errors->has('email'))
                             <span class="text-danger">{{ $errors->first('email') }}</span>
